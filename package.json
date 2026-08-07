@@ -1,0 +1,35 @@
+{
+  "name": "colterminal",
+  "version": "1.0.0",
+  "description": "Open color coded terminals.",
+  "keywords": [
+    "colterminal",
+    "terminal",
+    "cmd",
+    "powershell",
+    "commandline",
+    "color",
+    "coded"
+  ],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "license": "MIT",
+  "author": "Francisco Hidalgo <eltinydev>",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "bin": {
+    "colterminal": "dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.62.4"
+  }
+}

@@ -1,0 +1,25 @@
+make an npm program to open background colored terminals [CMD/POWERSHELL]
+this needs to work from the terminal so if users execute the following commands happen the following:
+
+#COMANDS AND FEATURES
+colterminal (without parameters it starts only one terminal with the default color)
+colterminal -p cmd (-p or --program == cmd or powershell is the argument to specify what terminal to open, for now only with support for powershell and cmd)
+colterminal -l 2 (this argument -l or --length == number, the number of opened terminals, if more than one then it automaticly assign a diferent background color for each one)
+colterminal -c "red,green,yellow,blue" (-c or --color assumes the number of terminals to be openned based in the number of valid colors introduced. And assign each introduced 
+				color to the background of each terminal (if onlyt one color introduced then oppens one with that color after validation, it accept color in string format, 
+				color codes like RGB and hexadécimal))
+colterminal -t   (-t or --text, same as -c but for the terminal text colors. Also if only this argument specified it opens terminals with the default background color color, assigning to them
+				only the text color pass trough this. if -c "red,green" -t "white,black" then first terminal oppens with red background and white text and the second one with 
+				green background and back text)
+				
+colterminal -h (-h or --help for showcasing all this commands and giving a brief use of this program).
+				
+#STYLE
+When the colors arent specific like in RGB or HEX format, atenaute the color so it dont disrupt so much. By that i mean if red then the red should be something like (45,0,0) in RGB.
+-Always change the terminal text to be in contrast with the selected background so it is redeable. (only if text colored not specified).
+
+#FOR EVALUATION
+if possible name each terminal to distinguish between them. If this is possible then the command in charge to do it is 
+"colterminal -"
+
+				
