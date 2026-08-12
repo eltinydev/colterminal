@@ -59,6 +59,9 @@ color that contrasts best with the selected background so it stays readable.
 # three terminals, one red/green/blue background each
 colterminal -c "red,green,blue"
 
+# three terminals, each named by arguments, all of them in different colors.
+colterminal -n "custom,custom2,custo3"
+
 # two PowerShell terminals with paired background and text colors
 colterminal -p powershell -c "red,green" -t "white,black"
 

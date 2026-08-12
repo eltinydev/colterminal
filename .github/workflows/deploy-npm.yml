@@ -1,0 +1,38 @@
+name: Deploy Package to npmjs
+
+# This triggers the workflow whenever you push to the main branch on GitHub
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  npm-deploy:
+    runs-on: ubuntu-latest
+    
+    # CRITICAL: Grant permissions for OIDC token generation and provenance signing
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          # This tells npm where to direct the OIDC authentication
+          registry-url: 'https://registry.npmjs.org'
+
+      # Standard clean installation of dependencies from your package-lock.json
+      - name: Install dependencies
+        run: npm ci
+
+      # Build your package
+      - name: Build package
+        run: npm run build
+      # Publishes using OIDC and attaches a cryptographic supply chain trust badge
+      - name: Publish to npm
+        run: npm publish --provenance
+        

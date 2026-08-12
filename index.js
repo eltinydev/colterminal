@@ -25,7 +25,7 @@ Options:
   -c, --color <list>              Comma separated background colors
   -t, --text <list>               Comma separated text colors
   -h, --help                      Show this help
-  -                               Name each terminal window
+  -n, --name                      Name each terminal window
 
 Colors accept names (red, green, blue, yellow, cyan, magenta, orange, purple, ...),
 RGB rgb(r,g,b) or r,g,b, and hex like #rrggbb. Named colors are attenuated (muted)
